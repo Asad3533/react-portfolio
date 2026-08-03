@@ -1,0 +1,226 @@
+.projects-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    to bottom,
+    #f8f9fa,
+    #ffffff
+  );
+}
+
+/* Section Title */
+
+.projects-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #212529;
+
+  margin-bottom: 70px;
+
+  position: relative;
+}
+
+.projects-title::after {
+  content: "";
+
+  display: block;
+
+  width: 90px;
+  height: 5px;
+
+  margin: 15px auto 0;
+
+  background: linear-gradient(
+    90deg,
+    #0d6efd,
+    #7c3aed
+  );
+
+  border-radius: 30px;
+}
+
+/* Project Card */
+
+.project-card {
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.4s ease;
+}
+
+/* Shine Effect */
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.project-card:hover::before {
+  left: 120%;
+}
+
+/* Hover */
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(13, 110, 253, 0.15);
+}
+
+/* Category Badge */
+
+.project-category {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #7c3aed
+  );
+
+  color: white;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 18px;
+}
+
+/* Project Title */
+
+.project-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  color: #212529;
+
+  margin-bottom: 12px;
+}
+
+/* Technologies */
+
+.project-tech {
+  color: #0d6efd;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+
+  font-size: 0.95rem;
+}
+
+/* Description */
+
+.project-description {
+  color: #555;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.project-buttons {
+  margin-top: auto;
+}
+
+.project-buttons .btn {
+  border-radius: 12px;
+
+  padding: 10px 18px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.project-buttons .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* GitHub Button */
+
+.project-buttons .btn-dark:hover {
+  background: #000;
+}
+
+/* Live Demo Button */
+
+.project-buttons .btn-primary {
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #7c3aed
+  );
+
+  border: none;
+}
+
+.project-buttons .btn-primary:hover {
+  opacity: 0.95;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .projects-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 70px 0;
+  }
+
+  .projects-title {
+    font-size: 2.2rem;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .project-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
